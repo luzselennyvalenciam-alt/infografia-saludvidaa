@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gestión Integral del Riesgo en Salud — SaludVida Integral S.A.S.</title>
+<style>
+:root{
+  --bg:#f5f7fb; --card:#fff; --ink:#172033; --muted:#5d687b;
+  --accent:#2357a6; --accent2:#1c7c72; --line:#dce3ee;
+}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+header{background:linear-gradient(135deg,#183d78,#237a72);color:white;padding:42px 6%;text-align:center}
+header h1{margin:0 0 10px;font-size:clamp(28px,5vw,46px)} header p{max-width:900px;margin:auto;font-size:17px}
+.container{max-width:1180px;margin:auto;padding:28px 5%}
+nav{position:sticky;top:0;z-index:10;background:white;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:center}
+nav button{border:0;background:white;padding:14px 18px;font-weight:700;color:var(--muted);cursor:pointer}
+nav button.active,nav button:hover{color:var(--accent);box-shadow:inset 0 -3px var(--accent)}
+section{display:none} section.active{display:block}
+.intro,.card,.risk,.method,.step,.case{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 5px 18px rgba(20,40,80,.05);margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+h2{color:var(--accent);margin-top:4px} h3{margin-top:6px} .small{font-size:14px;color:var(--muted)}
+.badge{display:inline-block;border-radius:999px;padding:5px 10px;background:#eaf0fb;color:var(--accent);font-size:12px;font-weight:bold}
+.risk{border-left:7px solid var(--accent)} .clinical{border-left-color:#b23a48}.financial{border-left-color:#8a5a00}.org{border-left-color:#5b4aa8}.epi{border-left-color:#1c7c72}
+.method button{border:0;background:#eef3fb;color:var(--accent);font-weight:bold;border-radius:9px;padding:9px 12px;cursor:pointer}
+.detail{display:none;margin-top:12px;padding:12px;background:#f7f9fc;border-radius:10px}.detail.open{display:block}
+.phva{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.step{min-height:190px;border-top:6px solid var(--accent2)} .step b{font-size:28px;color:var(--accent2)}
+.flow{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;margin:20px 0}
+.flow span{padding:12px 15px;background:#edf5f4;border-radius:12px;font-weight:bold}.arrow{font-size:24px;color:var(--accent)}
+table{width:100%;border-collapse:collapse;background:white;border-radius:12px;overflow:hidden}th,td{border:1px solid var(--line);padding:11px;text-align:left;vertical-align:top}th{background:#edf2fa;color:#173b73}
+footer{margin-top:25px;padding:25px 6%;background:#172033;color:white;font-size:13px} footer a{color:white}
+.note{background:#fff8df;border-left:5px solid #d09b00;padding:15px;border-radius:8px}
+ul{padding-left:20px}
+@media(max-width:600px){nav button{flex:1 1 50%}.container{padding:20px 4%}}
+</style>
+</head>
+<body>
+<header>
+<h1>Gestión Integral del Riesgo en Salud</h1>
+<p><strong>Infografía interactiva aplicada a SaludVida Integral S.A.S.</strong><br>
+Clasificación de riesgos · metodologías cualitativas y cuantitativas · ciclo PHVA · integración clínico-financiera-organizacional</p>
+</header>
+
+<nav>
+<button class="active" onclick="showTab('map',this)">🗺️ Mapa de riesgos</button>
+<button onclick="showTab('methods',this)">⚙️ Metodologías</button>
+<button onclick="showTab('phva',this)">🔄 PHVA</button>
+<button onclick="showTab('case',this)">🏥 Caso SaludVida</button>
+<button onclick="showTab('sources',this)">📚 Fuentes</button>
+</nav>
+
+<main class="container">
+<section id="map" class="active">
+<div class="intro">
+<h2>1. Mapa visual de clasificación de riesgos</h2>
+<p>La gestión integral del riesgo en salud debe superar la mirada aislada del evento adverso. Un mismo riesgo puede producir consecuencias clínicas, económicas, operativas y reputacionales. ISO 31000:2018 plantea un enfoque aplicable a toda la organización para identificar, analizar, evaluar, tratar, monitorear y comunicar los riesgos.</p>
+<p class="small">La clasificación siguiente es una síntesis operativa para la IPS; las categorías pueden adaptarse al contexto institucional.</p>
+</div>
+<div class="grid">
+<div class="risk clinical"><span class="badge">RIESGO CLÍNICO</span><h3>Seguridad y resultados en salud</h3>
+<p>Probabilidad de daño asociado al proceso de atención.</p>
+<ul><li>Eventos adversos.</li><li>Errores de medicación.</li><li>Infecciones asociadas a la atención.</li><li>Errores diagnósticos.</li><li>Caídas y fallas de identificación.</li></ul>
+<strong>En SaludVida:</strong> aumento del 18 % de eventos adversos y hospitalizaciones evitables.</div>
+
+<div class="risk financial"><span class="badge">RIESGO FINANCIERO</span><h3>Sostenibilidad económica</h3>
+<p>Posibilidad de pérdidas o desviaciones que afecten los recursos institucionales.</p>
+<ul><li>Concentración del gasto.</li><li>Costos por complicaciones.</li><li>Hospitalizaciones evitables.</li><li>Glosas o problemas de facturación.</li><li>Uso ineficiente de recursos.</li></ul>
+<strong>En SaludVida:</strong> 9 % de los pacientes concentra el 48 % del gasto anual.</div>
+
+<div class="risk org"><span class="badge">RIESGO ORGANIZACIONAL</span><h3>Procesos y gobernanza</h3>
+<p>Riesgos derivados de fallas en procesos, talento humano, tecnología, información o gobierno.</p>
+<ul><li>Procesos fragmentados.</li><li>Falta de indicadores.</li><li>Planes de acción sin seguimiento.</li><li>Fallos de comunicación.</li><li>Débil cultura de riesgo.</li></ul>
+<strong>En SaludVida:</strong> cada área maneja matrices sin integración institucional.</div>
+
+<div class="risk epi"><span class="badge">RIESGO EPIDEMIOLÓGICO / POBLACIONAL</span><h3>Riesgos del territorio</h3>
+<p>Eventos o condiciones que modifican las necesidades de salud de una población.</p>
+<ul><li>Dengue y enfermedades transmisibles.</li><li>Diabetes tipo II.</li><li>Envejecimiento.</li><li>Multimorbilidad.</li><li>Determinantes sociales.</li></ul>
+<strong>En SaludVida:</strong> aumento de dengue, diabetes y adultos mayores vulnerables.</div>
+
+<div class="risk"><span class="badge">RIESGO REGULATORIO</span><h3>Cumplimiento normativo</h3>
+<p>Posibilidad de incumplir requisitos legales, técnicos o regulatorios aplicables.</p>
+<ul><li>Hallazgos de auditoría.</li><li>Incumplimientos documentales.</li><li>Controles insuficientes.</li><li>Planes de mejoramiento incompletos.</li></ul>
+<strong>En SaludVida:</strong> observaciones de auditoría y aplicación parcial del enfoque regulatorio.</div>
+
+<div class="risk"><span class="badge">RIESGO REPUTACIONAL</span><h3>Confianza de los grupos de interés</h3>
+<p>Impacto sobre la percepción de pacientes, familias, EPS, autoridades y colaboradores.</p>
+<ul><li>Eventos adversos.</li><li>Quejas y reclamos.</li><li>Incumplimientos.</li><li>Comunicación deficiente.</li></ul>
+<strong>Relación:</strong> un evento clínico puede convertirse en un riesgo financiero y reputacional.</div>
+</div>
+</section>
+
+<section id="methods">
+<div class="intro">
+<h2>2. Metodologías: cualitativas vs. cuantitativas</h2>
+<p>Las metodologías cualitativas permiten comprender y priorizar riesgos cuando la información numérica es limitada. Las cuantitativas expresan el riesgo mediante datos, probabilidades, frecuencias, costos o modelos matemáticos. En una IPS madura, ambas se complementan.</p>
+</div>
+<div class="grid">
+<div class="method"><span class="badge">CUALITATIVAS</span><h3>Interpretan y priorizan</h3>
+<p>Utilizan categorías, escalas y juicio experto.</p>
+<ul><li>Entrevistas y grupos focales.</li><li>Listas de chequeo.</li><li>Mapa de riesgos.</li><li>Matriz probabilidad–impacto.</li><li>Análisis de causa raíz.</li><li>FMEA/AMFE como herramienta semicuantitativa.</li></ul>
+<button onclick="toggle('qual')">Ver aplicación →</button>
+<div id="qual" class="detail">Útiles para iniciar el diagnóstico de SaludVida: permiten identificar rápidamente dónde están los riesgos críticos y priorizar procesos como medicamentos, urgencias y seguimiento de crónicos.</div>
+</div>
+<div class="method"><span class="badge">CUANTITATIVAS</span><h3>Miden y estiman</h3>
+<p>Usan datos históricos, probabilidades, frecuencias y magnitudes económicas o clínicas.</p>
+<ul><li>Tasas de eventos por 1.000 atenciones.</li><li>Frecuencia de hospitalizaciones.</li><li>Costo promedio por cohorte.</li><li>Probabilidad de ocurrencia.</li><li>Modelos predictivos.</li><li>Series de tiempo y análisis estadístico.</li></ul>
+<button onclick="toggle('quant')">Ver aplicación →</button>
+<div id="quant" class="detail">SaludVida puede utilizar sus datos de 85.000 usuarios para identificar pacientes con mayor probabilidad de complicación, hospitalización o consumo elevado de recursos.</div>
+</div>
+</div>
+<div class="card">
+<h3>¿Por qué combinarlas?</h3>
+<table>
+<tr><th>Necesidad</th><th>Herramienta</th><th>Ejemplo en SaludVida</th></tr>
+<tr><td>Detectar fallas potenciales</td><td>FMEA/AMFE</td><td>Analizar fallas en administración de medicamentos.</td></tr>
+<tr><td>Priorizar riesgos</td><td>Matriz de riesgos</td><td>Clasificar eventos por probabilidad e impacto.</td></tr>
+<tr><td>Medir desempeño</td><td>Indicadores</td><td>Tasa de eventos adversos y hospitalizaciones evitables.</td></tr>
+<tr><td>Predecir complicaciones</td><td>Analítica cuantitativa</td><td>Segmentar pacientes de alto costo.</td></tr>
+</table>
+</div>
+</section>
+
+<section id="phva">
+<div class="intro">
+<h2>3. Ciclo PHVA aplicado a la gestión del riesgo</h2>
+<p>El PHVA convierte la gestión del riesgo en un proceso de mejora continua. No basta con identificar un riesgo: hay que intervenirlo, verificar si el control funciona y ajustar la respuesta.</p>
+</div>
+<div class="phva">
+<div class="step"><b>01</b><h3>PLANEAR</h3><p>Contextualizar la organización, identificar riesgos, analizar probabilidad e impacto, priorizar y definir responsables, controles e indicadores.</p><strong>SaludVida:</strong> consolidar las matrices aisladas y priorizar eventos adversos, crónicos de alto costo y riesgos regulatorios.</div>
+<div class="step"><b>02</b><h3>HACER</h3><p>Implementar tratamientos y controles preventivos, correctivos o de mitigación.</p><strong>SaludVida:</strong> FMEA en procesos críticos, gestión de casos y seguimiento de cohortes de alto riesgo.</div>
+<div class="step"><b>03</b><h3>VERIFICAR</h3><p>Medir resultados, revisar indicadores, auditar controles y comparar resultados con las metas.</p><strong>SaludVida:</strong> evaluar eventos adversos, hospitalizaciones evitables, costos y cumplimiento de planes.</div>
+<div class="step"><b>04</b><h3>ACTUAR</h3><p>Corregir desviaciones, actualizar controles, estandarizar buenas prácticas y reiniciar el ciclo.</p><strong>SaludVida:</strong> ajustar procesos y recursos según los resultados obtenidos.</div>
+</div>
+<div class="flow"><span>Riesgo identificado</span><span class="arrow">→</span><span>Valoración</span><span class="arrow">→</span><span>Tratamiento</span><span class="arrow">→</span><span>Indicadores</span><span class="arrow">→</span><span>Mejora</span></div>
+</section>
+
+<section id="case">
+<div class="intro">
+<h2>4. Aplicación integrada al caso SaludVida Integral S.A.S.</h2>
+<p>La prioridad es transformar una gestión fragmentada y reactiva en un sistema institucional que conecte seguridad del paciente, riesgo financiero, epidemiología, operación y cumplimiento.</p>
+</div>
+<div class="case">
+<h3>🔴 Prioridad 1 — Eventos adversos</h3>
+<p><strong>Problema:</strong> incremento del 18 %.</p>
+<p><strong>Intervención:</strong> aplicar FMEA/AMFE y análisis de causa raíz a procesos críticos; fortalecer barreras de seguridad; establecer indicadores y seguimiento PHVA.</p>
+<p><strong>Indicadores:</strong> eventos adversos por 1.000 atenciones, porcentaje de eventos analizados, cierre de acciones y recurrencia.</p>
+</div>
+<div class="case">
+<h3>🟠 Prioridad 2 — Pacientes de alto costo</h3>
+<p><strong>Problema:</strong> 9 % de pacientes genera 48 % del gasto.</p>
+<p><strong>Intervención:</strong> segmentación de riesgo, cohortes de enfermedad renal, cardiovascular, oncológica y multimorbilidad; gestión de casos y alertas tempranas.</p>
+<p><strong>Indicadores:</strong> hospitalizaciones evitables, reingresos, costo por cohorte, adherencia al seguimiento y porcentaje de pacientes con plan de cuidado.</p>
+</div>
+<div class="case">
+<h3>🟡 Prioridad 3 — Riesgo territorial</h3>
+<p><strong>Problema:</strong> dengue, diabetes tipo II y concentración de adultos mayores vulnerables.</p>
+<p><strong>Intervención:</strong> caracterización poblacional, vigilancia epidemiológica y articulación con Secretaría de Salud y actores del territorio.</p>
+<p><strong>Indicadores:</strong> cobertura de intervenciones preventivas, comportamiento de casos priorizados y oportunidad del seguimiento.</p>
+</div>
+<div class="case">
+<h3>🟢 Prioridad 4 — Integración institucional</h3>
+<p><strong>Problema:</strong> matrices aisladas y debilidades en indicadores, planes de acción y articulación clínico-financiera.</p>
+<p><strong>Intervención:</strong> crear un mapa institucional de riesgos bajo ISO 31000, con responsables, controles, indicadores, apetito/tolerancia definidos por la organización y revisión periódica por la alta dirección.</p>
+</div>
+
+<div class="card">
+<h2>Modelo integrado propuesto</h2>
+<div class="flow"><span>Contexto</span><span class="arrow">→</span><span>Identificación</span><span class="arrow">→</span><span>Análisis</span><span class="arrow">→</span><span>Evaluación</span><span class="arrow">→</span><span>Tratamiento</span><span class="arrow">→</span><span>Monitoreo</span></div>
+<p><strong>ISO 31000</strong> aporta el marco transversal; <strong>FMEA/AMFE</strong> profundiza en procesos; la <strong>matriz de riesgos</strong> prioriza; los <strong>indicadores</strong> cuantifican; y <strong>PHVA</strong> asegura la mejora continua.</p>
+</div>
+
+<div class="note"><strong>Idea clave:</strong> el riesgo clínico, financiero y organizacional no debe gestionarse en silos. En SaludVida, un evento adverso puede generar daño al paciente, mayor estancia, incremento del costo, reclamaciones y afectación reputacional. Por eso el mapa institucional debe visualizar las conexiones entre riesgos.</div>
+</section>
+
+<section id="sources">
+<div class="intro">
+<h2>5. Fuentes y referencias</h2>
+<p>Fuentes utilizadas para fundamentar los conceptos de gestión del riesgo y seguridad del paciente.</p>
+</div>
+<div class="card">
+<ul>
+<li><strong>International Organization for Standardization (ISO).</strong> ISO 31000:2018, Risk management — Guidelines. La versión 2018 fue revisada y confirmada en 2023 y continúa vigente. <a href="https://www.iso.org/standard/65694.html" target="_blank">ISO — ISO 31000:2018</a></li>
+<li><strong>Organización Mundial de la Salud (OMS).</strong> Global Patient Safety Report 2024. Presenta evidencia y acciones globales para fortalecer la seguridad del paciente. <a href="https://www.who.int/publications/i/item/9789240095458" target="_blank">OMS — Global Patient Safety Report 2024</a></li>
+<li><strong>Organización Mundial de la Salud (OMS).</strong> Patient Safety, 2023. Señala la magnitud del daño prevenible y la importancia de sistemas, liderazgo, datos y participación del paciente. <a href="https://www.who.int/es/news-room/fact-sheets/detail/patient-safety/" target="_blank">OMS — Seguridad del paciente</a></li>
+<li><strong>Superintendencia Nacional de Salud.</strong> Marco colombiano de supervisión y gestión basada en riesgos.</li>
+</ul>
+<p class="small">Nota: ISO 31000 es una guía de gestión del riesgo y no una norma certificable. La aplicación concreta en una IPS debe armonizarse con la normativa colombiana que corresponda al tipo de servicio y entidad.</p>
+</div>
+</section>
+</main>
+
+<footer>
+<strong>SaludVida Integral S.A.S. — Infografía académica</strong><br>
+Recurso educativo para síntesis de gestión integral del riesgo en salud. Navega mediante las pestañas y botones interactivos.
+</footer>
+
+<script>
+function showTab(id,btn){
+ document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+ document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));
+ btn.classList.add('active');
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+function toggle(id){document.getElementById(id).classList.toggle('open')}
+</script>
+</body>
+</html>
